@@ -1,0 +1,173 @@
+---
+import Html from './icons/Html.astro'
+import Css from './icons/Css.astro'
+import JS from './icons/JS.astro'
+import React from './icons/React.astro'
+import AstroF from './icons/AstroF.astro'
+import Next from './icons/Next.astro'
+import Vite from './icons/Vite.astro'
+import Java from './icons/Java.astro'
+import Cshar from './icons/Cshar.astro'
+import Php from './icons/Php.astro'
+import Mongo from './icons/Mongo.astro'
+import Postg from './icons/Postg.astro'
+import Mysql from './icons/Mysql.astro'
+import Cplus from './icons/Cplus.astro'
+import Firebase from './icons/Firebase.astro'
+
+
+const skills = [
+    {
+        nombre: "HTML5",
+        icono: Html
+    },
+    {
+        nombre: "CSS3",
+        icono: Css
+    },
+    {
+        nombre: "JavaScript",
+        icono: JS 
+    },
+    {
+        nombre: "React.js",
+        icono: React 
+    },
+    {
+        type: 'framework',
+        nombre: "Next.js",
+        icono: Next
+    },
+    {
+        type: 'framework',
+        nombre: "Astro",
+        icono: AstroF
+    },
+    {
+        type: 'framework',
+        nombre: "Vite",
+        icono: Vite
+    },
+    {
+        type: 'lenguaje',
+        nombre: "Java",
+        icono: Java
+    },
+    {
+        type: 'lenguaje',
+        nombre: "C#",
+        icono: Cshar
+    },
+    {
+        type: 'lenguaje',
+        nombre: "PHP",
+        icono: Php
+    },
+    {
+        type: 'lenguaje',
+        nombre: "C/C++",
+        icono: Cplus
+    },
+    {
+        type: 'bd',
+        nombre: "MongoDB",
+        icono: Mongo
+    },
+    {
+        type: 'bd',
+        nombre: "PostgresSQL",
+        icono: Postg
+    },
+    {
+        type: 'bd',
+        nombre: "MySQL",
+        icono: Mysql
+    },
+    {
+        type: 'bd',
+        nombre: "Firebase",
+        icono: Firebase
+    },
+    
+]
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+    <div class="text-pretty order-2 md:order-1"> 
+        <p class="mb-4">
+            Soy Pablo Gillespie. Comencé en la programación hace 4 años.
+            Actualmente estoy en busca de una oportunidad para poder perfeccionarme en el mercado laboral IT.
+        </p> 
+        <p class="mb-4">
+            Me considero una persona metódica, disciplinada, 
+            orientada al detalle, creativa, responsable, emprendedora, aplicada, 
+            con capacidad de seguir instrucciones, de aprender nuevos lenguajes según la demanda del mercado actual. 
+            Me gustan los retos, poner en práctica todo nuevo conocimiento para poder así mejorar en las áreas más débiles.
+        </p> 
+        <p class="mb-4">
+            Con respecto a mis estudios, soy <strong class="text-primary">Estudiante avanzado del Tecnólogo en Informática</strong> y egresado del <strong class="text-primary">Bachillerato en Informática - Desarrollo y Soporte</strong>, 
+            además tengo realizados cursos de Desarrollo Web y Desarrollo FullStack en <strong class="text-primary">Udemy.com</strong>
+        </p> 
+    </div>
+    <img 
+        width="192" 
+        height="192" 
+        src="https://media.licdn.com/dms/image/C4E03AQEj_1ZHwSO2iA/profile-displayphoto-shrink_200_200/0/1638969916905?e=1712188800&v=beta&t=EC886A_e1KW9TmIc6eS0DggHbNsw7e_cv5XkdXrWyWA" 
+        alt="Pablo Gillespie" 
+        class="order-1 object-cover h-full p-1 bg-white md:order-2 rotate-3 lg:p-2 aspect-square mask-squircle dark:bg-yellow-500/5 ring-1 ring-white/20 transition hover:-rotate-6" 
+        style="object-position: 50% 50%"
+    >
+
+</article>
+<div>
+    <h3 class="text-2xl flex items-center gap-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
+            <path d="M20 21l2 -2l-2 -2" />
+            <path d="M17 17l-2 2l2 2" />
+        </svg>    
+        Skills
+    </h3>
+
+    <p class="text-base mt-5 text-yellow-200 mb-4">Front-End</p>
+    <ul class="flex flex-wrap items-center gap-3">
+        {
+            skills.map(s => (
+                !s.type && (
+                    <li class="w-20 flex flex-col-reverse items-center justify-center gap-2 py-2 px-4 border border-white/10 bg-white/5 hover:scale-110 hover:bg-white/10 transition rounded-md">
+                        <span class="text-xs font-semibold">{s.nombre}</span>
+                        <s.icono class="size-6"/>
+                    </li>
+                ) 
+            ))
+        }
+    </ul>
+
+    <p class="text-base mt-5 text-yellow-200 mb-2">Frameworks</p>
+    <ul class="flex flex-wrap items-center gap-3">
+        {
+            skills.map(s => (
+                s.type === "framework" && (
+                    <li class="w-20 flex flex-col-reverse items-center justify-center gap-2 py-2 px-4 border border-white/10 bg-white/5 hover:scale-110 hover:bg-white/10 transition rounded-md">
+                        <span class="text-xs font-semibold">{s.nombre}</span>
+                        <s.icono class="size-6"/>
+                    </li>
+                )
+            ))
+        }
+    </ul>
+    <p class="text-base mt-5 text-yellow-200 mb-2">Back-End y BDs</p>
+    <ul class="flex flex-wrap items-center gap-3">
+        {
+            skills.map(s => (
+                (s.type === "lenguaje" || s.type === "bd") && (
+                    <li class="w-20 flex flex-col-reverse items-center justify-center gap-2 py-2 px-4 border border-white/10 bg-white/5 hover:scale-110 hover:bg-white/10 transition rounded-md">
+                        <span class="text-xs font-semibold">{s.nombre}</span>
+                        <s.icono class="size-6"/>
+                    </li>
+                )
+            ))
+        }
+    </ul>
+</div>

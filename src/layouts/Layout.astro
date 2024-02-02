@@ -1,0 +1,100 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header'
+// Supports weights 100-900
+import '@fontsource-variable/onest';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title,description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script src="/js/index.js" type="module"/>
+	</head>
+	<body class="bg-gradient-to-b from-indigo-500/20">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	body{
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+  		font-family: 'Onest Variable', sans-serif;
+
+	}
+
+	@media(prefers-reduced-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+
+	@media(max-width: 468px) {
+		.menuTel{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			right: 0;
+			left: 0;
+			bottom: .5rem;
+			z-index: 4;
+		}
+
+		.menuTel nav{
+			box-shadow: 0px 0px 0px 0px rgba(19, 21, 26, 0.30), 
+						0px 1px 2px 0px rgba(19, 21, 26, 0.29), 
+						0px 4px 4px 0px rgba(19, 21, 26, 0.26), 
+						0px 10px 6px 0px rgba(19, 21, 26, 0.15), 
+						0px 17px 7px 0px rgba(19, 21, 26, 0.04), 
+			0px 26px 7px 0px rgba(19, 21, 26, 0.01);
+			background: linear-gradient(180deg, #13151A 0%, rgba(19, 21, 26, 0.88) 100%);
+		}
+		.menuCompu{
+			display: none;
+		}
+	}
+	@media(min-width: 468px) {
+		.menuCompu{
+			display: flex;
+		}
+		.menuTel{
+			display: none;
+		}
+	}
+
+	@media(max-width: 448px) {
+		.menuVisible{
+			transform: translateY(0);
+		}
+	}
+	@media(max-width: 448px) {
+		.menuOculto{
+			transform: translateY(10rem);
+		}
+	}
+</style>
