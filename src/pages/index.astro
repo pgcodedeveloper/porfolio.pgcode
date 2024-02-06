@@ -11,6 +11,8 @@ import Proyectos from '../components/Proyectos'
 import SobreMi from '../components/SobreMi.astro'
 import EnlacesSocial from '../components/icons/EnlacesSocial.astro';
 import Contacto from '../components/Contacto.astro';
+
+export const prerender = true
 ---
 
 <Layout title="Desarrollador y Programador Web FullStack" description='+2 años de experiencia en el Desarrollo Web y Desktop.'>
@@ -65,7 +67,7 @@ import Contacto from '../components/Contacto.astro';
 				</svg>
 				Proyectos
 			</h2>
-			<Proyectos client:only="react"/>
+			<Proyectos client:load/>
 		</Section>
 
 		<Section class="py-10" id="sobre-mi">

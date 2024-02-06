@@ -3,6 +3,8 @@ import Section from "../../components/Section.astro"
 import Layout from "../../layouts/Layout.astro"
 import {formatearFecha} from '../../helpers/index'
 
+export const prerender = true
+
 export async function getStaticPaths() {
     const url= `https://pgcodedeveloper-pgcodedeveloper.koyeb.app/proyectos`;
     const [resProyectos] = await Promise.all([
