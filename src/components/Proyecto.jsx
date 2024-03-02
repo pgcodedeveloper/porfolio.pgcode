@@ -2,19 +2,24 @@
 import React from 'react'
 
 const Proyecto = ({proyecto}) => { 
-    const {nombre, descripcion,descripcionCorta, url, imagen, repo, demo, fecha} = proyecto;
+    const {titulo, descripcion,tecnologias, url, imagen, repo, demo, fecha} = proyecto;
     return (
         <article className="sm:max-w-full max-w-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center sm:flex-row-reverse mb-5 hover:scale-105 transition flex-col">
-            <a className='p-4'>
-                <img className="mx-auto" src={imagen?.formats?.thumbnail?.url} alt={`Imagen proyecto ${nombre}`} loading='eager' />
+            <a className='p-4 flex-1'>
+                <img className="mx-auto w-auto max-h-[400px]" src={imagen} alt={`Imagen proyecto ${titulo}`} loading='lazy' />
             </a>
             <div className="p-5 flex-1">
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-sky-600/85">{nombre}</h2>
+                <h2 className="mb-2 text-2xl font-bold tracking-tight text-sky-600/85">{titulo}</h2>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-4">
                     {descripcion}
                 </p>
-            
-                <div className='flex items-center gap-x-3'>
+
+                <div className='flex items-center flex-wrap gap-2'>
+                    {tecnologias.map(tec => (
+                        <span key={tec.id} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{tec.nombre}</span>
+                    ))}
+                </div>
+                <div className='mt-3 flex items-center gap-x-3'>
                     <a href={`/proyecto/${url}`} className="btn btn-sm text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Ver más
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

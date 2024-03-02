@@ -1,20 +1,14 @@
 ---
 import Section from "../../components/Section.astro"
 import Layout from "../../layouts/Layout.astro"
-import {formatearFecha} from '../../helpers/index'
+import {formatearFecha, Proyectos} from '../../helpers/index'
 
 export const prerender = true
 
 export async function getStaticPaths() {
-    const url= `https://pgcodedeveloper-pgcodedeveloper.koyeb.app/proyectos`;
-    const [resProyectos] = await Promise.all([
-        fetch(url)
-    ]);
     
-    const [proyectos] = await  Promise.all([
-        resProyectos.json()
-    ]);
-
+    
+    const proyectos = Proyectos;
     return proyectos.map(proy =>({
         params: {
             id: proy.url
@@ -26,10 +20,8 @@ export async function getStaticPaths() {
 }
 
 const {proyecto} = Astro.props;
-const {nombre, descripcion, imagen, repo, demo, fecha} = proyecto;
-const { formats } = imagen;
-const { small } = formats;
-const { url } = small;
+const {titulo, descripcion, imagen, repo, demo, fecha, tecnologias, descripcionLarga} = proyecto;
+
 ---
 
 <Layout title="Desarrollador y Programador Web FullStack" description="+2 años de experiencia en el Desarrollo Web y Desktop.">
@@ -49,14 +41,20 @@ const { url } = small;
                     <path d="M10 17l-.5 4" />
                     <path d="M14 17l.5 4" />
                 </svg>
-				Proyecto {nombre}
+				Proyecto {titulo}
 			</h2>
             <time class="text-right text-sm block">Última actualización: {formatearFecha(fecha)}</time>
 
             <article class="mt-5">
                 
-                <img class="img mr-2" src={url} alt=`Imagen proyecto ${nombre}`>
-                <p class="text">{descripcion}</p>
+                <img class="img mr-2" src={imagen} alt=`Imagen proyecto ${titulo}`>
+                <p class="text">{descripcionLarga}</p>
+
+                <div class='mt-5 flex items-center flex-wrap gap-2'>
+                    {tecnologias.map(tec => (
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{tec.nombre}</span>
+                    ))}
+                </div>
                 
                 <div class="flex items-center mt-5 gap-x-4">
                     {repo && (
