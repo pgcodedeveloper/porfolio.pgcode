@@ -27,14 +27,17 @@ const Header = () => {
             <div className='menuTel'>
                 <nav className='flex text-sm font-medium rounded-full gap-2 px-2 backdrop-blur-lg z-[2] transition' id='menu'>
                     <a href="/#experiencia" className='p-2 transition'>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
                             <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
                             <path d="M12 12l0 .01" />
                             <path d="M3 13a20 20 0 0 0 18 0" />
                         </svg>
                     </a>
                     <a href="/#proyectos" className='p-2 transition'>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>2
+                        <svg xmlns="http://www.w3.org/2000/svg" className="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>2
                             <path d="M8.5 13.5l-1.5 -1.5l1.5 -1.5" />
                             <path d="M15.5 10.5l1.5 1.5l-1.5 1.5" />
                             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -42,7 +45,7 @@ const Header = () => {
                         </svg>
                     </a>
                     <a href="/#sobre-mi" className='p-2 transition'>
-                        <svg class="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                             <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
@@ -50,7 +53,9 @@ const Header = () => {
                         </svg>
                     </a>
                     <a href="/#contacto" className='p-2 transition'>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="size-6 hover:text-yellow-200 hover:scale-125" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
                             <path d="M10 16h6" />
                             <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                             <path d="M4 8h3" />

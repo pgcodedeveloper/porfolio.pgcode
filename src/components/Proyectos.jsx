@@ -32,9 +32,10 @@ const Proyectos = () => {
             {proyectosPag?.map((proy,i) => (
                     <Proyecto 
                         proyecto={proy}
-                        key={proy.id + i}
+                        key={proy.id}
                     />
             ))}
+            
             <Paginacion 
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}

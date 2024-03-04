@@ -37,7 +37,8 @@ export const Proyectos = [
         url: "cms-clientes",
         repo: "https://github.com/pgcodedeveloper/pgcms",
         demo: "https://pgcms.vercel.app/",
-        fecha: "2023-12-26"
+        fecha: "2023-12-26",
+        tipo: "FullStack"
     },
     {
         id: 2,
@@ -62,7 +63,8 @@ export const Proyectos = [
         url: "control-gastos",
         repo: "https://github.com/pgcodedeveloper/appgastos",
         demo: "https://appgastos2022.netlify.app/",
-        fecha: "2022-11-26"
+        fecha: "2022-11-26",
+        tipo: "FrontEnd"
     },
     {
         id: 3,
@@ -87,12 +89,13 @@ export const Proyectos = [
         url: "control-gastos-movil",
         repo: "https://github.com/pgcodedeveloper/pggastos_native",
         demo: "https://expo.dev/artifacts/eas/r99GM68E9TKT2AXhGa41t2.apk",
-        fecha: "2024-01-10"
+        fecha: "2024-01-10",
+        tipo: "Android"
     },
     {
         id: 4,
         titulo: "Agenda Virtual",
-        descripcion: "Proyecto FullStack de una agenda virtual que permite al usuario administrar sus eventos y tareas.",
+        descripcion: "Proyecto FrontEnd de una agenda virtual que permite al usuario administrar sus eventos y tareas.",
         descripcionLarga: "Este pryecto fue interesante de realizar dado que me permitió experimentar cómo hacer uso de los servicios Google, como lo son Google Calendar y Google Tasks. \n\nEn esta aplicaición podrás acceder a diferentes servicios como: \n- La administración de Eventos que estan asociados a su Google Calendar. \n- La administración de Tareas que estan asociadas a su Google Tasks. \n- Entre muchas otras.",
         tecnologias: [
             {
@@ -109,23 +112,62 @@ export const Proyectos = [
             },
             {
                 id: 4,
-                nombre: "Express"
+                nombre: "Daisyui"
             },
             {
                 id: 5,
-                nombre: "MongoDB"
+                nombre: "Google API"
+            },
+            {
+                id: 6,
+                nombre: "Context API"
             }
         ],
         imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1705693221/medium_Captura_c5afafe415.png",
-        url: "agenda-virtual",
+        url: "agenda-virtual-frontend",
         repo: "https://github.com/pgcodedeveloper/pg_agenda_frontend",
         demo: "",
-        fecha: "2024-03-01"
+        fecha: "2024-03-01",
+        tipo: "FrontEnd",
     },
     {
         id: 5,
+        titulo: "Agenda Virtual",
+        descripcion: "Proyecto BackEnd de una agenda virtual que permite al usuario administrar sus eventos y tareas.",
+        descripcionLarga: "Este pryecto integra los servicios Google, como lo son Google Calendar y Google Tasks, para la aplicación Agenda Virtual FrontEnd \n\nAdemás se encarga de crear los registros en la base de dato.\n Esto fue posible por el uso de Express para la creación de los routers, models y handlers que se encargan de la funcionalidad de cada endpint de la API.",
+        tecnologias: [
+            {
+                id: 1,
+                nombre: "Express"
+            },
+            {
+                id: 2,
+                nombre: "Node.js"
+            },
+            {
+                id: 3,
+                nombre: "Dotenv"
+            },
+            {
+                id: 4,
+                nombre: "MongoDB"
+            },
+            {
+                id: 5,
+                nombre: "Google API"
+            }
+        ],
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709558077/jtelsq8k5fwlyoyckkm7.png",
+        url: "agenda-virtual-backend",
+        repo: "https://github.com/pgcodedeveloper/pg_agenda_backend",
+        demo: "",
+        fecha: "2024-03-01",
+        tipo: "BackEnd",
+    },
+    {
+        id: 6,
         titulo: "PGSend",
-        descripcion: "Proyecto FullStack copia de FirefoxSend. Te permite compartir archivos con otros usuarios.",
+        descripcion: "Proyecto FrontEnd copia de FirefoxSend. Te permite compartir archivos con otros usuarios.",
         descripcionLarga: "Este proyecto es una copia de FirefoxSend el cual te permite de forma sencilla compartir archivos con otros usuarios. \nAdemás podrás asegurar tus archivos con un password y asignarles un número determinado de descargas. \n\nLas principales funcionalidades son: \n- Subir archivos con y sin tener una cuenta. \n- Asignar un password al archivo por subir (Requisito tener una cuenta). \n-Asignar un númer determinado de descargas permitidas (Requisito tener una cuenta). \n- Y muchas más",
         tecnologias: [
             {
@@ -142,21 +184,60 @@ export const Proyectos = [
             },
             {
                 id: 4,
+                nombre: "Daisyui"
+            },
+            {
+                id: 5,
+                nombre: "Dropzone"
+            },
+            {
+                id: 6,
+                nombre: "Context API"
+            }
+        ],
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709390749/lkz6845snb2thiu4ntix.png",
+        url: "pg-send-frontend",
+        repo: "https://github.com/pgcodedeveloper/pgsend_front",
+        demo: "",
+        fecha: "2023-12-29",
+        tipo: "FrontEnd"
+    },
+    {
+        id: 7,
+        titulo: "PGSend",
+        descripcion: "Proyecto BackEnd copia de FirefoxSend. Compartir archivos con otros usuarios.",
+        descripcionLarga: "Este proyecto es el encargado de darle lógica al PGSend FrontEnd. \nEn este proyecto tuve la oportinidad de afirmar conocimientos en: \n\n- El manejo de endpont complejos, \n- sanitizar los datos enviados desde el cliente, \n-manejo de archivos de diversos tipos en el servidor, \n- Hasheo de los datos sensibles \n- y mucho más.",
+        tecnologias: [
+            {
+                id: 1,
                 nombre: "Express"
+            },
+            {
+                id: 2,
+                nombre: "Node.js"
+            },
+            {
+                id: 3,
+                nombre: "Dotenv"
+            },
+            {
+                id: 4,
+                nombre: "Multer"
             },
             {
                 id: 5,
                 nombre: "MongoDB"
-            }
+            },
         ],
-        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709390749/lkz6845snb2thiu4ntix.png",
-        url: "pg-send",
-        repo: "https://github.com/pgcodedeveloper/pgsend_front",
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709558200/b3wtbrr6qyy1c330mpnd.png",
+        url: "pg-send-backend",
+        repo: "https://github.com/pgcodedeveloper/pgsend_back",
         demo: "",
-        fecha: "2023-12-29"
+        fecha: "2023-12-29",
+        tipo: "BackEnd"
     },
     {
-        id: 6,
+        id: 8,
         titulo: "MiCarrito",
         descripcion: "Proyecto que permite al usuario administrarse sus listas de compras de manera sencilla.",
         descripcionLarga: "Este sencillo proyecto nace de la nececidad de tener una manera de hacer la lista de la compra sin gastar papel y poder acceder a ella en todo lugar. \n El usuario podrá crear, editar y eliminar las diferentes listas que posea en su panel, además de poder ir tachando aquellos items que ya se compraron.",
@@ -178,10 +259,11 @@ export const Proyectos = [
         url: "mi-carrito",
         repo: "https://github.com/pgcodedeveloper/miCarrito",
         demo: "https://mi-carritocode.netlify.app/",
-        fecha: "2023-12-22"
+        fecha: "2023-12-22",
+        tipo: "FrontEnd"
     },
     {
-        id: 7,
+        id: 9,
         titulo: "PGTasks",
         descripcion: "Proyecto que permite al usuario administrar tareas y actividades de todo tipo.",
         descripcionLarga: "Si bien ya existen varias opciones diferentes para administrar tareas y actividades, este proyecto me permitió afirmar conocimientos en el uso de los servicios de Firebase y poder támbien darle otro enfoque diferente. \n\nEl usuario que acceda tendrá la posibilidad de: \n- Crear, editar, eliminar tareas. \n- Podrá ver las tareas que tienen una mayor prioridad. \n- Podrá ver las tareas que estan próximas a vencer en el plazo de entrega. \n- Podrá ver las tareas no iniciadas. \n- Podrá personalizar el color y el icnono de cada tarea. \n- Y mucho más.",
@@ -207,10 +289,11 @@ export const Proyectos = [
         url: "pg-tasks",
         repo: "https://github.com/pgcodedeveloper/pgtasks",
         demo: "https://pgtasks.netlify.app/",
-        fecha: "2023-08-21"
+        fecha: "2023-08-21",
+        tipo: "FullStack"
     },
     {
-        id: 8,
+        id: 10,
         titulo: "App de Bebidas",
         descripcion: "Proyecto que permite al usuario buscar información sobre diferentes tipos de bebidas, pudiendo conocer sus ingredientes y preparación.",
         descripcionLarga: "Proyecto educativo para afirmar conocimientos; En esta oportinidad obtuve los datos de las diferentes bebidas de https://www.thecocktaildb.com/ que permite buscar bebidas de diferentes tipos junto con las respectivas recetas y modo de preparación de cada una. \n\nLas principales funcionalidades de la aplicación son:\n- Realizar búsquedas por el nombre de la bebida y su categoría.\n- Visualizar en una ventana tipo modal la información de cada bebida.\n- Guardar en favoritos las bebidas.\n- Visualizar todo el contenido de las bebidas favoritas.\n- Persistir los datos con LocalStorage.\n- Y mucho más.",
@@ -231,6 +314,7 @@ export const Proyectos = [
         imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1672666988/medium_bebidas_e96beda5d9.png",
         url: "app-bebidas",
         repo: "https://github.com/pgcodedeveloper/bebidasApp",
-        fecha: "2022-12-30"
+        fecha: "2022-12-30",
+        tipo: "FrontEnd"
     }
 ]

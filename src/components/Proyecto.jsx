@@ -2,12 +2,14 @@
 import React from 'react'
 
 const Proyecto = ({proyecto}) => { 
-    const {titulo, descripcion,tecnologias, url, imagen, repo, demo, fecha} = proyecto;
+    const {titulo, descripcion,tecnologias, url, imagen, repo, demo, fecha, tipo} = proyecto;
     return (
-        <article className="sm:max-w-full max-w-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center sm:flex-row-reverse mb-5 hover:scale-105 transition flex-col">
-            <a className='p-4 flex-1'>
+        <article className="relative sm:max-w-full max-w-xl rounded-lg shadow flex items-center sm:flex-row-reverse mb-5 transition flex-col">
+            <div className="absolute top-0 bottom-0 right-0 left-0 z-[-2] rounded-lg bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+            <div className='p-4 flex-1 flex flex-col items-end gap-y-2'>
+                <span className="text-slate-300 text-xs font-bold px-2.5 py-0.5 rounded bg-primary/75 text-right">{tipo}</span>
                 <img className="mx-auto w-auto max-h-[400px]" src={imagen} alt={`Imagen proyecto ${titulo}`} loading='lazy' />
-            </a>
+            </div>
             <div className="p-5 flex-1">
                 <h2 className="mb-2 text-2xl font-bold tracking-tight text-sky-600/85">{titulo}</h2>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-4">
