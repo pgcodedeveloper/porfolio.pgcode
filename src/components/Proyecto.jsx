@@ -8,7 +8,7 @@ const Proyecto = ({proyecto}) => {
             <div className="absolute top-0 bottom-0 right-0 left-0 z-[-2] rounded-lg bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
             <div className='p-4 flex-1 flex flex-col items-end gap-y-2'>
                 <span className="text-slate-300 text-xs font-bold px-2.5 py-0.5 rounded bg-primary/75 text-right">{tipo}</span>
-                <img className="mx-auto w-auto max-h-[400px]" src={imagen} alt={`Imagen proyecto ${titulo}`} loading='lazy' />
+                <img className="mx-auto w-auto max-h-[400px] aspect-[16/9]" src={imagen} alt={`Imagen proyecto ${titulo}`} loading='lazy' />
             </div>
             <div className="p-5 flex-1">
                 <h2 className="mb-2 text-2xl font-bold tracking-tight text-sky-600/85">{titulo}</h2>

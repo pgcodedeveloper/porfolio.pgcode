@@ -157,7 +157,7 @@ export const Proyectos = [
                 nombre: "Google API"
             }
         ],
-        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709558077/jtelsq8k5fwlyoyckkm7.png",
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709847561/qofhoxenov6vugiavi5q.png",
         url: "agenda-virtual-backend",
         repo: "https://github.com/pgcodedeveloper/pg_agenda_backend",
         demo: "",
