@@ -14,7 +14,9 @@ import Postg from './icons/Postg.astro'
 import Mysql from './icons/Mysql.astro'
 import Cplus from './icons/Cplus.astro'
 import Firebase from './icons/Firebase.astro'
-
+import Node from './icons/Node.astro'
+import Express from './icons/Express.astro'
+import Typescript from './icons/Typescript.astro'
 
 const skills = [
     {
@@ -47,6 +49,16 @@ const skills = [
         type: 'framework',
         nombre: "Vite",
         icono: Vite
+    },
+    {
+        type: 'framework',
+        nombre: "Node.js",
+        icono: Node
+    },
+    {
+        type: 'framework',
+        nombre: "Express.js",
+        icono: Express
     },
     {
         type: 'lenguaje',
@@ -88,6 +100,16 @@ const skills = [
         nombre: "Firebase",
         icono: Firebase
     },
+    {
+        type:"aprendiendo",
+        nombre: "React Native",
+        icono: React
+    },
+    {
+        type:"aprendiendo",
+        nombre: "TypeScript",
+        icono: Typescript
+    }
     
 ]
 ---
@@ -165,6 +187,19 @@ const skills = [
                     <li class="w-20 flex flex-col-reverse items-center justify-center gap-2 py-2 px-4 border border-white/10 bg-white/5 hover:scale-110 hover:bg-white/10 transition rounded-md">
                         <span class="text-xs font-semibold">{s.nombre}</span>
                         <s.icono class="size-6"/>
+                    </li>
+                )
+            ))
+        }
+    </ul>
+    <p class="text-base mt-5 text-yellow-200 mb-2">Aprendiendo...</p>
+    <ul class="flex flex-wrap items-center gap-3">
+        {
+            skills.map(s => (
+                (s.type === "aprendiendo") && (
+                    <li class="w-28 flex flex-col-reverse items-center justify-center gap-2 py-2 px-4 border border-white/10 bg-white/5 hover:scale-110 hover:bg-white/10 transition rounded-md">
+                        <span class="text-xs font-semibold">{s.nombre}</span>
+                        <s.icono class="size-5"/>
                     </li>
                 )
             ))

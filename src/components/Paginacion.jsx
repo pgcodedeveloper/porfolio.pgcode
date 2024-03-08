@@ -30,3 +30,4 @@ const Paginacion = ({currentPage, setCurrentPage,cantPag}) => {
 
 export default Paginacion
 
+

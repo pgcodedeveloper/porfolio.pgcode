@@ -1,12 +1,12 @@
 export const formatearFecha = fecha => {
     const f = new Date(fecha);
     f.setDate(f.getDate() + 1);
-    const opciones = {
+
+    return f.toLocaleDateString('es-ES', {
         year: 'numeric',
         month: 'numeric',
         day: 'numeric'
-    }
-    return f.toLocaleDateString('es-ES', opciones)
+    });
 }
 
 export const Proyectos = [
@@ -313,6 +313,7 @@ export const Proyectos = [
         ],
         imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1672666988/medium_bebidas_e96beda5d9.png",
         url: "app-bebidas",
+        demo: "https://bebidas-app-pgcode.netlify.app/",
         repo: "https://github.com/pgcodedeveloper/bebidasApp",
         fecha: "2022-12-30",
         tipo: "FrontEnd"
