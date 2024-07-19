@@ -33,7 +33,7 @@ const {titulo, descripcion, imagen, repo, demo, fecha, tecnologias, descripcionL
                 </svg>
                 Volver
             </a>
-            <h2 id="experiencia" class="sm:text-3xl text-2xl mt-5 sm:mt-0 font-semibold mb-6 flex items-center gap-x-3 justify-center text-balance">
+            <h2 id="experiencia" class="sm:text-3xl text-2xl mt-5 font-semibold mb-6 flex items-center gap-x-3 justify-center text-balance">
 				<svg xmlns="http://www.w3.org/2000/svg" class="size-7" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M3 4a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-12z" />
                     <path d="M3 13h18" />
@@ -41,7 +41,7 @@ const {titulo, descripcion, imagen, repo, demo, fecha, tecnologias, descripcionL
                     <path d="M10 17l-.5 4" />
                     <path d="M14 17l.5 4" />
                 </svg>
-				Proyecto {titulo}
+				Proyecto: <span class="text-primary">{titulo}</span>
 			</h2>
             <time class="text-right text-sm block">Última actualización: {formatearFecha(fecha)}</time>
 

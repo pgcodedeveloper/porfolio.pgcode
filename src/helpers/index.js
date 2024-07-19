@@ -94,7 +94,7 @@ export const Proyectos = [
     },
     {
         id: 4,
-        titulo: "Agenda Virtual",
+        titulo: "Agenda Virtual (FrontEnd)",
         descripcion: "Proyecto FrontEnd de una agenda virtual que permite al usuario administrar sus eventos y tareas.",
         descripcionLarga: "Este pryecto fue interesante de realizar dado que me permitió experimentar cómo hacer uso de los servicios Google, como lo son Google Calendar y Google Tasks. \n\nEn esta aplicaición podrás acceder a diferentes servicios como: \n- La administración de Eventos que estan asociados a su Google Calendar. \n- La administración de Tareas que estan asociadas a su Google Tasks. \n- Entre muchas otras.",
         tecnologias: [
@@ -123,7 +123,7 @@ export const Proyectos = [
                 nombre: "Context API"
             }
         ],
-        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1705693221/medium_Captura_c5afafe415.png",
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709847561/qofhoxenov6vugiavi5q.png",
         url: "agenda-virtual-frontend",
         repo: "https://github.com/pgcodedeveloper/pg_agenda_frontend",
         demo: "",
@@ -132,7 +132,7 @@ export const Proyectos = [
     },
     {
         id: 5,
-        titulo: "Agenda Virtual",
+        titulo: "Agenda Virtual (BackEnd)",
         descripcion: "Proyecto BackEnd de una agenda virtual que permite al usuario administrar sus eventos y tareas.",
         descripcionLarga: "Este pryecto integra los servicios Google, como lo son Google Calendar y Google Tasks, para la aplicación Agenda Virtual FrontEnd \n\nAdemás se encarga de crear los registros en la base de dato.\n Esto fue posible por el uso de Express para la creación de los routers, models y handlers que se encargan de la funcionalidad de cada endpint de la API.",
         tecnologias: [
@@ -157,7 +157,7 @@ export const Proyectos = [
                 nombre: "Google API"
             }
         ],
-        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1709847561/qofhoxenov6vugiavi5q.png",
+        imagen: "https://res.cloudinary.com/damn8kr5q/image/upload/v1721416661/pa86icn1yhdcrxmnruec.png",
         url: "agenda-virtual-backend",
         repo: "https://github.com/pgcodedeveloper/pg_agenda_backend",
         demo: "",
