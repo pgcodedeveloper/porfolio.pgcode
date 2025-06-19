@@ -18,7 +18,6 @@ const Proyectos = () => {
     }
     useEffect(() => {
         paginar(currentPage);
-        console.log(proyectosR);
     }, [])
 
     useEffect(() =>{
